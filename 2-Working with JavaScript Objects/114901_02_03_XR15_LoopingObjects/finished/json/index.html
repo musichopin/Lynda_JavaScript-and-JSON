@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+	<title>JavaScript And JSON</title>
+</head>
+<body>
+<h2>Links</h2>
+<ul id="links">
+</ul>
+
+
+<script>
+
+var info = {
+	"full_name" : "Ray Villalobos",
+	"title" : "Staff Author",
+	"links" : { // our data may come in unordered when looping (see next ex)
+	    "blog"     : "http://iviewsource.com",
+	    "facebook" : "http://facebook.com/iviewsource",
+		"youtube"  : "http://www.youtube.com/planetoftheweb",
+		"podcast"  : "http://feeds.feedburner.com/authoredcontent",
+		"twitter"  : "http://twitter.com/planetoftheweb" 
+	}
+};
+
+var output = "";
+
+for ( key in info.links ) {
+	if (info.links.hasOwnProperty(key)) {
+		output += '<li>' +
+		'<a href = "' + info.links[key] +
+		'">' + key + '</a>' +
+		'</li>';
+	} //if the links has the key property
+} // for...go through each link
+
+var update = document.getElementById('links');
+update.innerHTML = output;
+
+/*alt: creating ul el on js:
+var ul = document.createElement("ul")
+document.body.appendChild(ul)
+document.querySelector("ul").innerHTML = output
+*/
+
+</script>
+</body>
+</html>

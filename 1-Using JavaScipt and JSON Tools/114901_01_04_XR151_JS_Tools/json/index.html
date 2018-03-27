@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>JavaScript And JSON</title>
+</head>
+<body>
+	<script>
+		var info = {
+			"full_name" : "Ray Villalobos",
+			"title" : "Staff Author",
+			"links" : [
+					{ "blog"   	 : "http://iviewsource.com" },
+					{ "facebook" : "http://facebook.com/iviewsource" },
+					{ "youtube"	 : "http://www.youtube.com/planetoftheweb" },
+					{ "podcast"  : "http://feeds.feedburner.com/authoredcontent" },
+					{ "twitter"  : "http://twitter.com/planetoftheweb" }
+				],
+			"a-b": 2, // can only be called as info["a-b"]
+			"b_a": 2, // can be called as info.a_b
+			"1": 2 // can only be called as info[1]
+		};
+	</script>
+</body>
+</html>

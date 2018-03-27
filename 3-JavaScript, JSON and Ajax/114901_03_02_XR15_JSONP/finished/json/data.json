@@ -1,0 +1,12 @@
+// this file is supposed to be located on a different domain, which is at http://iviewsource.com/exercises/json/data.json"
+dataHandler({
+	"full_name" : "Ray Villalobos",
+	"title" : "Staff Author",
+	"links" : [
+			{ "blog"     : "http://iviewsource.com" },
+			{ "facebook" : "http://facebook.com/iviewsource" },
+			{ "podcast"  : "http://feeds.feedburner.com/authoredcontent" },
+			{ "twitter"  : "http://twitter.com/planetoftheweb" },
+			{ "youtube"  : "http://www.youtube.com/planetoftheweb" }
+		]
+});
