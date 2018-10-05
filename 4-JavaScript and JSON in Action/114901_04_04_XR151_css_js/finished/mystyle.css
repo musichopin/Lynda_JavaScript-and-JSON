@@ -11,6 +11,10 @@ body {
 	border-radius: 10px;
 }
 
+div.speaker {
+	background-color: white;
+}
+
 #speakerbox h3, #speakerbox h4 {
 	font-weight: normal;
 	margin: 0;

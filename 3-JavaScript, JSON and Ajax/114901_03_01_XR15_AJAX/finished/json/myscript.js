@@ -7,14 +7,19 @@ if (window.XMLHttpRequest) {
 	request=new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-request.open('GET', 'data/data.json'); // opens the async request for data file
+request.open('GET', 'data/data.json'); 
+// opens/configures the async request for data file
+// data.json cud be php file or anything
 
-request.onreadystatechange = function() { // async event handler
+// since we have async request above we need to put response below inside 
+// this event handler which is triggered whenever readyState changes
+request.onreadystatechange = function() { // async event handler cud come after send()
 	if ((request.status === 200) && // if request successful
-		(request.readyState === 4)) {
+		(request.readyState === 4)) { // if response complete
 
-		info = JSON.parse(request.responseText);//converts json response to js obj
-// JSON.stringify(info) ile request.responseText aynı jsondır (string içinde json obj)
+		info = JSON.parse(request.responseText); // response handling part
+//JSON.parse converts string (containing json response) to js/json object
+// JSON.stringify(info) ile request.responseText aynı stringdir (içinde json var)
 
 		var output='';
 
