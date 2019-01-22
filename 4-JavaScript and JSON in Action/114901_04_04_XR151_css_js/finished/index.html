@@ -17,7 +17,7 @@
 
 <!-- mustache.js for inserting json data into template -->
 <script id="speakerstpl" type="text/template">
-	{{#speakers}}
+	{{#speakers}} 
 		<div class="speaker">
 			<img src="images/{{shortname}}_tn.jpg" alt="Photo of {{name}}" />
 			<h3>{{name}}</h3>
@@ -37,7 +37,7 @@ $(function() { /*$() executes after dom is loaded*/
 
 	$.getJSON('data.json', function(data) {
 		var template = $('#speakerstpl').html(); // gets empty template
-		var mustHtml = Mustache.to_html(template, data); //flows json data into template
+		var mustHtml = Mustache.to_html(template, data);//flows json data into template
 		$('#carousel').html(mustHtml); // places filled template into #carousel
 		
 // cycle.js jquery plugin for cycling template:
@@ -54,12 +54,15 @@ $(function() { /*$() executes after dom is loaded*/
 }); //function
 
 /*
-*alt1: not using mustache.js and using cycle.js:*
+// *alt1: not using mustache.js and using cycle.js:*
 $(function() {
 	$.getJSON('data.json', function(data) {
 
 		var output = '';
-		$.each(data.speakers, function(key, val) {
+
+// alt: $(data.speakers).each(function(key, val) {
+		$.each(data.speakers, function(key, val) {//val=data.speakers[i]=this
+// no need for a 2nd loop since objects in speakers array have same keys			
 				output += '<div class="speaker">';
 				output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="Photo of '+ val.name +'" />';
 				output += '<h3>'+ val.name +'</h3>';
@@ -67,6 +70,7 @@ $(function() {
 				output += '<p>'+ val.bio +'</p>';
 				output += '</div>';
 		});
+
 		$('#carousel').html(output);
 
 		$('#carousel').cycle({

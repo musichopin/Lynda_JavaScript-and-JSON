@@ -1,4 +1,5 @@
 $(document).ready(function() { // doc is loaded (4 precaution)
+// alt: $(function() {
 
 	$.getJSON('data.json', function(info){ // info is js obj
 

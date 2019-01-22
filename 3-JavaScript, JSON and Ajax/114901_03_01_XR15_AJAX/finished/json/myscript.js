@@ -19,7 +19,7 @@ request.onreadystatechange = function() { // async event handler cud come after 
 
 		info = JSON.parse(request.responseText); // response handling part
 //JSON.parse converts string (containing json response) to js/json object
-// JSON.stringify(info) ile request.responseText aynı stringdir (içinde json var)
+//JSON.stringify(info) ile request.responseText aynı stringdir (içinde json olan string)
 
 		var output='';
 
@@ -30,7 +30,7 @@ request.onreadystatechange = function() { // async event handler cud come after 
 					'<a href = "' + info.links[i][key] +
 					'">' + key + '</a>';
 					'</li>';
-			    }   
+			  }   
 			}
 		}
 		

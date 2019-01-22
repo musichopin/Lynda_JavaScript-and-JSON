@@ -17,4 +17,3 @@ function dataHandler(info) {
 	update.innerHTML = output;
 
 }
-
