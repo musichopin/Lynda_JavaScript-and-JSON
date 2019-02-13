@@ -61,7 +61,7 @@ $(function() {
 		var output = '';
 
 // alt: $(data.speakers).each(function(key, val) {
-		$.each(data.speakers, function(key, val) {//val=data.speakers[i]=this
+		$.each(data.speakers, function(key, val) {//val=data.speakers[key]=this
 // no need for a 2nd loop since objects in speakers array have same keys			
 				output += '<div class="speaker">';
 				output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="Photo of '+ val.name +'" />';

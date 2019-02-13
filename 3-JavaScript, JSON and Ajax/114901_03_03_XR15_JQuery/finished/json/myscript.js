@@ -1,7 +1,7 @@
 $(document).ready(function() { // doc is loaded (4 precaution)
 // alt: $(function() {
 
-	$.getJSON('data.json', function(info){ // info is js obj
+	$.getJSON('data.json', function(info){ // info is js/json obj
 
 			var output='';
 			for (var i = 0; i <= info.links.length-1; i++) {

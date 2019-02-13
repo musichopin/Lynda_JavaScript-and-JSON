@@ -20,6 +20,8 @@ request.onreadystatechange = function() { // async event handler cud come after 
 		info = JSON.parse(request.responseText); // response handling part
 //JSON.parse converts string (containing json response) to js/json object
 //JSON.stringify(info) ile request.responseText aynı stringdir (içinde json olan string)
+		console.log(request.responseText);
+		console.log(info);
 
 		var output='';
 
